@@ -1,0 +1,478 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'SF Pro Display', sans-serif;
+    font-weight: 400;
+    line-height: normal;
+    background: #edf4ff;
+}
+
+.container,
+.wrapper {
+    position: relative;
+    max-width: 390px;
+    margin: 0 auto;
+}
+.wrapper{
+    background: rgb(245, 245, 245);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-bottom: 74px;
+}
+a {
+    text-decoration: none;
+    transition: .3s ease all;
+}
+button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+input {
+    outline: none;
+    border: none;
+    transition: .3s ease all;
+}
+
+
+/* Splash start */
+.splash{
+    height: 100vh;
+    background-image: url(../images/splash-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.splash .container{
+    max-width: 430px;
+}
+.splash .splash-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 38px;
+}
+.splash-content .splash-text{
+    max-width: 274px;
+    color: rgb(0, 0, 0);
+    font-size: 32.82px;
+    font-weight: 300;
+    line-height: 40.39px;
+    text-align: center;
+}
+/* Splash end */
+
+/* Home start */
+.home{
+    background-color: #f5f5f5;
+}
+.header{
+    padding: 11.5px 20px;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.header .header-title{
+    color: rgb(39, 39, 42);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 25px;
+    letter-spacing: -0.45%;
+    text-align: center;
+}
+.home .home-form{
+    padding: 0px 20px;
+    border-radius: 0px 0px 22px 22px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-bottom: 20px;
+}
+.home-form .home-form-group {
+    display: flex;
+    flex-direction: column;
+}
+.home-form .home-form-inp {
+    box-sizing: border-box;
+    border: 1px solid rgb(226, 226, 226);
+    border-radius: 8px;
+    background: rgb(255, 255, 255);
+    padding: 17px 15px;
+    color: rgb(39, 39, 42);
+    font-size: 20px;
+    line-height: 24px;
+}
+.home-form .home-form-group .home-form-inp:nth-child(1){
+    border-radius: 8px 8px 0px 0px;
+}
+.home-form .home-form-group .home-form-inp:nth-child(2){
+    border-radius: 0px 0px 8px 8px;
+    border-top: 0;
+}
+.home-form .home-form-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 58px;
+    width: 100%;
+    border-radius: 12px;
+    background: rgb(211, 48, 48);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    line-height: 24px;
+}
+/* Home end */
+
+/* Bottom menu start */
+.bottom-menu{
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%);
+    width: 390px;
+    height: 74px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    border-top: 1px solid rgb(223, 224, 228);
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.95);
+}
+.bottom-menu .bottom-menu-links{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bottom-menu .bottom-menu-link{
+    width: 87.5px;
+    height: 74px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    color: rgb(113, 113, 122);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 14px;
+}
+/* Bottom menu end */
+
+/* Trip start */
+.trip {
+    border-radius: 22px;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+}
+.trip .trip-content{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.trip-content .trip-box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.trip-content .trip-title{
+    color: rgb(28, 28, 30);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: -0.45%;
+}
+.trip-content .trip-items{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.trip-content .trip-item{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-between;
+}
+.trip-item .trip-item-info{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.trip-item .trip-item-texts{
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+.trip-item .trip-item-title{
+    color: rgb(28, 28, 30);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: -0.31%;
+}
+.trip-item .trip-item-text{
+    color: rgb(113, 113, 122);
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0%;
+} 
+/* Trip emd */
+
+/* Travel start */
+.travel{
+    padding: 0px 20px;
+}
+.travel .travel-content{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px;
+    background-image: url(../images/travel-bg.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.travel-content .travel-title{
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 22px;
+    letter-spacing: -0.43%;
+}
+.travel-content .travel-text{
+    max-width: 120px;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    line-height: 140%;
+    letter-spacing: -0.08%;
+}
+.travel-content .travel-link{
+    width: 100px;
+    height: 36px;
+    border-radius: 8px;
+    background: rgb(211, 48, 48);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 16px;
+}
+/* Travel end */
+
+/* Popular start */
+.popular{
+    padding: 20px;
+    border-radius: 22px;
+    background: rgb(255, 255, 255);
+}
+.popular .popular-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.popular-content .popular-title-wrap{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.popular-content .popular-title{
+    color: rgb(39, 39, 42);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: -0.45%;
+}
+.popular-content .popular-text{
+    color: rgb(113, 113, 122);
+    font-size: 14px;
+    line-height: 130%;
+    max-width: 350px;
+    letter-spacing: -0.31%;
+}
+.popular-content .popular-block{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.popular-content .popular-tabs{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px;
+    border-radius: 12px;
+    background: rgb(242, 243, 247);
+    width: 225px;
+    margin: 0 auto;
+}
+.popular-content .popular-tab{
+    width: 106.5px;
+    height: 32px;
+    padding: 4px 8px;
+    color: rgb(39, 39, 42);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.08%;
+    border-radius: 8px;
+}
+.popular-content .popular-tab.active{
+    background: rgb(255, 255, 255);
+}
+.popular-content .popular-items{
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+}
+.popular-content .popular-items.active{
+    display: flex;
+}
+.popular-content .popular-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 10px 12px;
+    border-radius: 12px;
+    background: rgb(245, 245, 245);
+}
+.popular-content .popular-item-info{
+    display: flex;
+    gap: 14px;
+}
+.popular-content .popular-item-texts{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.popular-content .popular-item-title{
+    color: rgb(39, 39, 42);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+}
+.popular-content .popular-item-text{
+    color: rgb(113, 113, 122);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 12px;
+}
+/* Popular end */
+
+/* Question start */
+.question{
+    padding: 0px 20px;
+}
+.question .question-content{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.question-content .question-title-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.question-content .question-title{
+    color: rgb(39, 39, 42);
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: -0.45%;
+}
+.question-content .question-link{
+    color: rgb(211, 48, 48);
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: -0.08%;
+}
+.question-content .question-accordions{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.question-content .accordion-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    color: rgb(39, 39, 42);
+    font-size: 17px;
+    font-weight: 500;
+    line-height: 22px;
+    letter-spacing: -0.43%;
+}
+.question-content .accordion-head{
+    cursor: pointer;
+}
+.question-content .accordion-head .accordion-minus{
+    display: none;
+}
+.question-content .question-accordion{
+    padding: 14px 15px;
+    border-radius: 12px;
+    height: 52px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow: hidden;
+    transition: .3s ease all;
+}
+.question-content .question-accordion.active{
+    height: auto;
+}
+.question-content .question-body{
+    color: rgb(113, 113, 122);
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: -0.31%;
+}
+/* Question end */
+
+/* Download start */
+.download{
+    border-radius: 22px 22px 0px 0px;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+}
+.download .download-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    border-radius: 12px;
+    background: rgb(242, 242, 247);
+    padding: 14px 15px;
+}
+.download-content .download-info{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+.download-content .download-info b{
+    color: rgb(39, 39, 42);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: -0.31%;
+}
+.download-content .download-info span{
+    color: rgb(141, 150, 159);
+    font-size: 12px;
+    line-height: 16px;
+}
+/* Download end */
