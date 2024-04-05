@@ -36,17 +36,19 @@ let searchBtn = document.querySelector('.blog-search-btn');
 let blogRadio = document.querySelector('.blog-radio');
 let blogRadioItems = document.querySelectorAll('.blog-radio-item');
 
-searchBtn.addEventListener('click', function () {
-    this.classList.toggle('active');
-    blogRadio.classList.toggle('active');
-});
-
-blogRadioItems.forEach(function (item) {
-    item.addEventListener('click', function () {
-        searchBtn.classList.remove('active');
-        blogRadio.classList.remove('active');
+try {
+    searchBtn.addEventListener('click', function () {
+        this.classList.toggle('active');
+        blogRadio.classList.toggle('active');
+    });
+    blogRadioItems.forEach(function (item) {
+        item.addEventListener('click', function () {
+            searchBtn.classList.remove('active');
+            blogRadio.classList.remove('active');
+        })
     })
-})
+} catch (error) {}
+
 
 
 
@@ -56,14 +58,18 @@ let tripCalendar = document.querySelector('.trip-calendar');
 let calendarModal = document.querySelector('.calendar-modal-wrap');
 let calendarClose = document.querySelectorAll('.closeBtn');
 
-tripCalendar.addEventListener('click', function() {
-    calendarModal.classList.toggle('active');
-})
-calendarClose.forEach(function(tab) {
-    tab.addEventListener('click', function() {
-        calendarModal.classList.remove('active');
+try {
+    tripCalendar.addEventListener('click', function() {
+        calendarModal.classList.toggle('active');
     })
-})
+
+    calendarClose.forEach(function(tab) {
+        tab.addEventListener('click', function() {
+            calendarModal.classList.remove('active');
+        })
+    })
+} catch (error) {}
+
 
 
 
