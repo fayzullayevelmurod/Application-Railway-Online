@@ -31,6 +31,7 @@ menuLinks.forEach(function (menuLink) {
     });
 });
 
+
 // Radio show
 let searchBtn = document.querySelector('.blog-search-btn');
 let blogRadio = document.querySelector('.blog-radio');
@@ -50,9 +51,6 @@ try {
 } catch (error) {}
 
 
-
-
-
 // Calendar modal
 let tripCalendar = document.querySelector('.trip-calendar');
 let calendarModal = document.querySelector('.calendar-modal-wrap');
@@ -69,9 +67,6 @@ try {
         })
     })
 } catch (error) {}
-
-
-
 
 
 // Accordion
