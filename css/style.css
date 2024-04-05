@@ -247,7 +247,8 @@ input {
     flex-direction: column;
     gap: 12px;
     padding: 20px;
-    background-image: url(../images/travel-bg.png);
+    border-radius: 22px;
+    background-image: url(../images/magazine.jpeg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
@@ -316,6 +317,7 @@ input {
     gap: 20px;
 }
 .popular-content .popular-tabs{
+    position: relative;
     display: flex;
     align-items: center;
     gap: 4px;
@@ -326,6 +328,8 @@ input {
     margin: 0 auto;
 }
 .popular-content .popular-tab{
+    position: relative;
+    z-index: 2;
     width: 106.5px;
     height: 32px;
     padding: 4px 8px;
@@ -336,9 +340,18 @@ input {
     letter-spacing: -0.08%;
     border-radius: 8px;
 }
-.popular-content .popular-tab.active{
+.popular-content .popular-tab-bg{
+    position: absolute;
+    top: 4px;
+    left: 0;
+    margin: 0px 4px;
+    z-index: 0;
+    height: 32px;
+    border-radius: 8px;
     background: rgb(255, 255, 255);
+    transition: .10s ease all;
 }
+
 .popular-content .popular-items{
     display: none;
     flex-direction: column;
@@ -828,13 +841,20 @@ input {
     justify-content: center;
     background: rgb(255, 255, 255);
 }
-.blog-content .blog-search-btn.active svg{
-    fill: rgb(211, 48, 48);
+.blog-content .blog-search-btn .blog-seeting-icon2{
+    display: none;
+}
+.blog-content .blog-search-btn.active .blog-seeting-icon1{
+    display: none;
+}
+.blog-content .blog-search-btn.active .blog-seeting-icon2{
+    display: flex;
 }
 .blog-search-box .blog-radio{
     position: absolute;
     right: 0;
     top: 47px;
+    z-index: 5;
     opacity: 0;
     pointer-events: none;
     width: 248px;
@@ -882,6 +902,28 @@ input {
     padding: 20px;
     border-radius: 22px;
     background: rgb(255, 255, 255);
+}
+.blog-card .blog-card-img{
+    position: relative;
+    border-radius: 12px;
+}
+.blog-card .blog-card-img span{
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    color: rgb(28, 28, 30);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 4px;
+    backdrop-filter: blur(6px);
+    background: rgba(255, 255, 255, 0.85);
+}
+.blog-card .blog-card-img img{
+    width: 100%;
+    border-radius: 12px;
 }
 .blog-card .blog-card-body{
     display: flex;
@@ -1165,6 +1207,10 @@ input {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+.single-info .single-img{
+    border-radius: 12px;
+    width: 100%;
 }
 .single-info .single-text{
     color: rgb(28, 28, 30);

@@ -1,23 +1,58 @@
 // Popular tab
+// let popularTabs = document.querySelectorAll('.popular-tab');
+// let popularItems = document.querySelectorAll('.popular-items');
+
+// popularTabs.forEach(function (tab, index) {
+//     tab.addEventListener('click', function() {
+//         popularTabs.forEach(function (t) {
+//             t.classList.remove('active');
+//         });
+//         tab.classList.add('active');
+
+//         popularItems.forEach(function (item, i) {
+//             if (i === index) {
+//                 item.classList.add('active');
+//             } else {
+//                 item.classList.remove('active');
+//             }
+//         });
+//     });
+// });
+
+
 let popularTabs = document.querySelectorAll('.popular-tab');
 let popularItems = document.querySelectorAll('.popular-items');
+let popularTabBg = document.querySelector('.popular-tab-bg');
 
-popularTabs.forEach(function (tab, index) {
-    tab.addEventListener('click', function() {
-        popularTabs.forEach(function (t) {
-            t.classList.remove('active');
-        });
-        tab.classList.add('active');
-
-        popularItems.forEach(function (item, i) {
-            if (i === index) {
-                item.classList.add('active');
-            } else {
-                item.classList.remove('active');
-            }
+try {
+    let initialTabWidth = popularTabs[0].offsetWidth;
+    popularTabBg.style.width = initialTabWidth + 'px';
+    popularTabBg.style.left = '1.4px';
+    
+    popularTabs.forEach(function (tab, index) {
+        tab.addEventListener('click', function() {
+            popularTabs.forEach(function (t) {
+                t.classList.remove('active');
+            });
+            tab.classList.add('active');
+    
+            popularItems.forEach(function (item, i) {
+                if (i === index) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+    
+            let tabWidth = tab.offsetWidth; 
+            popularTabBg.style.width = tabWidth + 'px'; 
+            popularTabBg.style.left = (index * tabWidth + 1.4) + 'px';
         });
     });
-});
+    
+} catch (error) {}
+
+
 
 
 // Menu active
