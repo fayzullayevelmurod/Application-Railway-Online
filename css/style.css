@@ -24,7 +24,7 @@ body {
     flex-direction: column;
     height: 100vh;
     gap: 24px;
-    padding-bottom: 74px;
+    padding: 47px 0px 74px;
 }
 a {
     text-decoration: none;
@@ -78,6 +78,13 @@ input {
     background-color: #f5f5f5;
 }
 .header{
+    position: fixed;
+    top: 0;
+    left: 50%;
+    z-index: 7;
+    transform: translate(-50%);
+    width: 390px;
+    height: 47px;
     padding: 11.5px 20px;
     background-color: #ffffff;
     display: flex;
@@ -140,7 +147,7 @@ input {
 /* Bottom menu start */
 .bottom-menu{
     position: fixed;
-    z-index: 99;
+    z-index: 7;
     left: 50%;
     bottom: 0;
     transform: translate(-50%);
@@ -424,44 +431,53 @@ input {
     flex-direction: column;
     gap: 12px;
 }
+.question-content .question-accordion{
+    padding: 14px 15px;
+    border-radius: 12px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
 .question-content .accordion-head{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
     width: 100%;
+    max-height: fit-content;
     color: rgb(39, 39, 42);
     font-size: 17px;
     font-weight: 500;
     line-height: 22px;
     letter-spacing: -0.43%;
-}
-.question-content .accordion-head{
     cursor: pointer;
 }
-.question-content .accordion-head .accordion-minus{
-    display: none;
+.accordion-head .accordion-minus{
+    opacity: 0;
+    pointer-events: none;
 }
-.question-content .question-accordion{
-    padding: 14px 15px;
-    border-radius: 12px;
-    height: 52px;
-    background: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    overflow: hidden;
+.accordion-head .accordion-minus,
+.accordion-head .accordion-plus{
+    position: absolute;
     transition: .3s ease all;
-}
-.question-content .question-accordion.active{
-    height: auto;
+    right: 0;
+    top: 0;
 }
 .question-content .question-body{
     color: rgb(113, 113, 122);
     font-size: 14px;
     line-height: 130%;
     letter-spacing: -0.31%;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
 }
+.question-content .question-body.active{
+    padding-top: 12px;
+}
+
 .question .question-info{
     display: flex;
     flex-direction: column;
@@ -479,6 +495,12 @@ input {
     line-height: 130%;
     letter-spacing: 0%;
     text-align: justify;
+}
+.question-info .question-more{
+    display: none;
+}
+.question-info .question-more.show{
+    display: block;
 }
 .question-info .question-text-more{
     color: rgb(211, 48, 48);
@@ -552,7 +574,7 @@ input {
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 2;
+    z-index: 8;
 }
 .calendar-modal-wrap .calendar-modal-body{
     display: flex;
@@ -594,7 +616,6 @@ input {
     border-radius: 0px 0px 22px 22px;
     background: rgb(255, 255, 255);
     padding: 20px;
-    margin-top: -24px;
 }
 .page-content .page-content-title{
     color: rgb(28, 28, 30);
@@ -613,7 +634,6 @@ input {
 
 /* About start */
 .about{
-    margin-top: -24px;
     padding: 0 20px 20px;
 }
 .about .container{
@@ -675,9 +695,7 @@ input {
 }
 /* About end */
 
-.feedback{
-    margin-top: -24px;
-}
+/* Feedback start */
 .feedback-content{
     display: flex;
     flex-direction: column;
@@ -775,11 +793,11 @@ input {
     align-items: center;
     justify-content: center;
 }
-/* Feedback start */
+/* Feedback end */
 
 /* Blog start */
 .blog{
-    padding: 0px 20px 24px;
+    padding: 24px 20px;
 }
 .blog .blog-content{
     display: flex;
@@ -805,6 +823,7 @@ input {
     position: absolute;
     left: 10px;
     top: 10px;
+    cursor: pointer;
 }
 .blog-content .blog-search-inp{
     width: 100%;
@@ -814,7 +833,7 @@ input {
     border-radius: 8px;
     padding: 10px 12px 10px 46px;
     background: rgb(255, 255, 255);
-    color: rgba(60, 60, 67, 0.6);
+    color: rgb(39, 39, 42);
     font-size: 16px;
     font-weight: 400;
     line-height: 21px;
@@ -826,6 +845,21 @@ input {
     font-weight: 400;
     line-height: 21px;
     letter-spacing: -0.31%;
+}
+input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+}
+.blog-content .blog-search-x{
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+}
+.blog-content .blog-search-x.active{
+    opacity: 1;
+    pointer-events: all;
 }
 .blog-content .blog-search-box{
     position: relative;
@@ -991,9 +1025,7 @@ input {
 /* Blog end */
 
 /* Checklist start */
-.checklist{
-    margin-top: -24px;
-}
+
 .checklist .checklist-content{
     padding: 20px;
     border-radius: 0px 0px 22px 22px;
@@ -1043,6 +1075,7 @@ input {
     gap: 8px;
 }
 .checklist-item .checklist-group label{
+    cursor: pointer;
     color: rgb(39, 39, 42);
     font-size: 16px;
     line-height: 21px;
@@ -1119,7 +1152,6 @@ input {
 .single{
     border-radius: 0px 0px 22px 22px;
     padding: 20px;
-    margin-top: -24px;
     margin-bottom: 24px;
     background: rgb(255, 255, 255);
 }
