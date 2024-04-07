@@ -1121,10 +1121,10 @@ input[type="search"]::-webkit-search-cancel-button {
   transition: .3s ease all;
 }
 .checklist-group [type=checkbox]::after {
-    top: 4px;
-    left: 4px;
+    top: 5px;
+    left: 5px;
     width: 7px;
-    height: 4px;
+    height: 3px;
     border-bottom: 2px solid #FFF;
     border-left: 2px solid #FFF;
     transform: rotate(-45deg);
@@ -1136,7 +1136,7 @@ input[type="search"]::-webkit-search-cancel-button {
 }
 .checklist-group [type=checkbox]:checked:before{
     background-color: rgb(205, 32, 38);
-    border: none;
+    border-color: rgb(205, 32, 38);
 }
 
 .checklist-item .checklist-group-text{
