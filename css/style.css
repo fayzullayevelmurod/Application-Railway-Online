@@ -647,7 +647,7 @@ input {
     align-items: center;
     height: 100%;
 }
-.about-content .about-logo{
+.about-content .about-logo svg{
     width: 130px;
 } 
 .about-content .about-info{
