@@ -635,6 +635,7 @@ input {
 /* About start */
 .about{
     padding: 0 20px 20px;
+    height: 100vh;
 }
 .about .container{
     height: 100%;
@@ -655,8 +656,9 @@ input {
     gap: 50px;
     justify-content: center;
     align-items: center;
-    padding: 148px 0;
+    padding: 20px;
     width: 100%;
+    height: 100%;
 }
 .about-info .about-title{
     color: rgb(28, 28, 30);
@@ -696,16 +698,24 @@ input {
 /* About end */
 
 /* Feedback start */
+.feedback{
+    height: 100vh;
+}
+.feedback .container {
+    height: 100%;
+}
 .feedback-content{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 24px;
+    height: 100%;
 }
 .feedback-content .feedback-info{
+    height: 100%;
     border-radius: 0px 0px 22px 22px;
     background: rgb(255, 255, 255);
-    padding: 152px 20px;
+    padding: 20px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
