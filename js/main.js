@@ -150,3 +150,15 @@ try {
         moreButton.style.display = 'none';
     });
 } catch(error) {}
+
+
+// Station active
+let stationWords = document.querySelectorAll('.station-word-link');
+stationWords.forEach(function (stationWord) {
+    stationWord.addEventListener('click', function () {
+        stationWords.forEach(function (link) {
+            link.classList.remove('active');
+        });
+        stationWord.classList.add('active');
+    });
+});
