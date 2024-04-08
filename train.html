@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="font/stylesheet.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <header class="header">
+            <a href="#" class="header-link">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M9.57 6.42999L3.5 12.5L9.57 18.57" stroke="#1C1C1E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M20.5 12.5H3.67001" stroke="#1C1C1E" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                     
+            </a>
+            <span class="header-title">Иваново</span>
+            <a href="#" class="header-link">
+                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12.5" r="9" stroke="#A1A1AA" stroke-width="1.5"/>
+                    <path d="M12.5 8C12.5 8.27614 12.2761 8.5 12 8.5C11.7239 8.5 11.5 8.27614 11.5 8C11.5 7.72386 11.7239 7.5 12 7.5C12.2761 7.5 12.5 7.72386 12.5 8Z" fill="#A1A1AA" stroke="#A1A1AA" stroke-width="1.5"/>
+                    <path d="M12 17.5V10.5" stroke="#A1A1AA" stroke-width="1.5"/>
+                </svg>                    
+            </a>
+        </header>
+
+        <section class="train">
+            <div class="container">
+                <div class="train-content">
+                    <div class="train-top">
+                        <p class="train-text">Расписание движения поездов и электричек от станции Иваново на 2024 год с учетом изменений. </p>
+    
+                        <div class="blog-search-wrap">
+                            <div class="blog-search">
+                                <label for="search" class="search-icon">
+                                    <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M21.875 21.875L18.0137 18.0208M18.0137 18.0208C19.2765 16.7599 20.0577 15.0169 20.0577 13.0913C20.0577 9.24394 16.9388 6.125 13.0913 6.125C9.24394 6.125 6.125 9.24394 6.125 13.0913C6.125 16.9388 9.24394 20.0577 13.0913 20.0577C15.0132 20.0577 16.7534 19.2794 18.0137 18.0208Z" stroke="#8E8E93" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                </label>
+                                <input id="search" type="search" placeholder="Город, станция или номер поезда" class="blog-search-inp">
+                                <button class="blog-search-x">
+                                    <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 17.5C13.1944 17.5 17 13.6943 17 9C17 4.30566 13.1944 0.5 8.5 0.5C3.80557 0.5 0 4.30566 0 9C0 13.6943 3.80557 17.5 8.5 17.5ZM12.2657 5.23438C12.5781 5.54663 12.5781 6.05322 12.2657 6.36572L9.63138 9L12.2657 11.6343C12.5781 11.9468 12.5781 12.4534 12.2657 12.7656C11.9533 13.0781 11.4467 13.0781 11.1343 12.7656L8.5 10.1313L5.86569 12.7656C5.55328 13.0781 5.04675 13.0781 4.73431 12.7656C4.42191 12.4534 4.42191 11.9468 4.73431 11.6343L7.36862 9L4.73431 6.36572C4.42191 6.05322 4.42191 5.54663 4.73431 5.23438C5.04672 4.92188 5.55325 4.92188 5.86569 5.23438L8.5 7.86865L11.1343 5.23438C11.4467 4.92188 11.9533 4.92188 12.2657 5.23438Z" fill="#8E8E93"/>
+                                    </svg>                                    
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="train-body">
+                        <div class="train-tabs">
+                            <button class="train-tab">Поезда</button>
+                            <button class="train-tab">Электрички</button>
+                            <div class="train-tab-bg"></div>
+                        </div>
+                        <div class="train-info">
+                            <div class="train-info-top">
+                                <div class="train-info-tabs">
+                                    <button class="train-info-tab active">Отправление</button>
+                                    <button class="train-info-tab">Прибытие</button>
+                                    <div class="train-info-tab-br"></div>
+                                </div>
+                                <div class="train-info-data">
+                                    <div class="train-data-item">
+                                        <div class="train-data-weeks">
+                                            <span class="train-data-week red">Сегодня</span>
+                                            <span class="train-data-week">Завтра</span>
+                                        </div>
+                                        <a href="#!" class="train-days">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M11.1667 2.37325V1.33325C11.1667 1.05992 10.94 0.833252 10.6667 0.833252C10.3933 0.833252 10.1667 1.05992 10.1667 1.33325V2.33325H5.83332V1.33325C5.83332 1.05992 5.60666 0.833252 5.33332 0.833252C5.05999 0.833252 4.83332 1.05992 4.83332 1.33325V2.37325C3.03332 2.53992 2.15999 3.61325 2.02666 5.20658C2.01332 5.39992 2.17332 5.55992 2.35999 5.55992H13.64C13.8333 5.55992 13.9933 5.39325 13.9733 5.20658C13.84 3.61325 12.9667 2.53992 11.1667 2.37325Z" fill="#8E8E93"/>
+                                                <path d="M13.3333 6.56006H2.66667C2.3 6.56006 2 6.86006 2 7.22673V11.3334C2 13.3334 3 14.6667 5.33333 14.6667H10.6667C13 14.6667 14 13.3334 14 11.3334V7.22673C14 6.86006 13.7 6.56006 13.3333 6.56006ZM6.14 12.1401C6.10667 12.1667 6.07333 12.2001 6.04 12.2201C6 12.2467 5.96 12.2667 5.92 12.2801C5.88 12.3001 5.84 12.3134 5.8 12.3201C5.75333 12.3267 5.71333 12.3334 5.66667 12.3334C5.58 12.3334 5.49333 12.3134 5.41333 12.2801C5.32667 12.2467 5.26 12.2001 5.19333 12.1401C5.07333 12.0134 5 11.8401 5 11.6667C5 11.4934 5.07333 11.3201 5.19333 11.1934C5.26 11.1334 5.32667 11.0867 5.41333 11.0534C5.53333 11.0001 5.66667 10.9867 5.8 11.0134C5.84 11.0201 5.88 11.0334 5.92 11.0534C5.96 11.0667 6 11.0867 6.04 11.1134C6.07333 11.1401 6.10667 11.1667 6.14 11.1934C6.26 11.3201 6.33333 11.4934 6.33333 11.6667C6.33333 11.8401 6.26 12.0134 6.14 12.1401ZM6.14 9.80673C6.01333 9.92673 5.84 10.0001 5.66667 10.0001C5.49333 10.0001 5.32 9.92673 5.19333 9.80673C5.07333 9.68006 5 9.50673 5 9.33339C5 9.16006 5.07333 8.98673 5.19333 8.86006C5.38 8.67339 5.67333 8.61339 5.92 8.72006C6.00667 8.75339 6.08 8.80006 6.14 8.86006C6.26 8.98673 6.33333 9.16006 6.33333 9.33339C6.33333 9.50673 6.26 9.68006 6.14 9.80673ZM8.47333 12.1401C8.34667 12.2601 8.17333 12.3334 8 12.3334C7.82667 12.3334 7.65333 12.2601 7.52667 12.1401C7.40667 12.0134 7.33333 11.8401 7.33333 11.6667C7.33333 11.4934 7.40667 11.3201 7.52667 11.1934C7.77333 10.9467 8.22667 10.9467 8.47333 11.1934C8.59333 11.3201 8.66667 11.4934 8.66667 11.6667C8.66667 11.8401 8.59333 12.0134 8.47333 12.1401ZM8.47333 9.80673C8.44 9.83339 8.40667 9.86006 8.37333 9.88673C8.33333 9.91339 8.29333 9.93339 8.25333 9.94673C8.21333 9.96673 8.17333 9.98006 8.13333 9.98672C8.08667 9.99339 8.04667 10.0001 8 10.0001C7.82667 10.0001 7.65333 9.92673 7.52667 9.80673C7.40667 9.68006 7.33333 9.50673 7.33333 9.33339C7.33333 9.16006 7.40667 8.98673 7.52667 8.86006C7.58667 8.80006 7.66 8.75339 7.74667 8.72006C7.99333 8.61339 8.28667 8.67339 8.47333 8.86006C8.59333 8.98673 8.66667 9.16006 8.66667 9.33339C8.66667 9.50673 8.59333 9.68006 8.47333 9.80673ZM10.8067 12.1401C10.68 12.2601 10.5067 12.3334 10.3333 12.3334C10.16 12.3334 9.98667 12.2601 9.86 12.1401C9.74 12.0134 9.66667 11.8401 9.66667 11.6667C9.66667 11.4934 9.74 11.3201 9.86 11.1934C10.1067 10.9467 10.56 10.9467 10.8067 11.1934C10.9267 11.3201 11 11.4934 11 11.6667C11 11.8401 10.9267 12.0134 10.8067 12.1401ZM10.8067 9.80673C10.7733 9.83339 10.74 9.86006 10.7067 9.88673C10.6667 9.91339 10.6267 9.93339 10.5867 9.94673C10.5467 9.96673 10.5067 9.98006 10.4667 9.98672C10.42 9.99339 10.3733 10.0001 10.3333 10.0001C10.16 10.0001 9.98667 9.92673 9.86 9.80673C9.74 9.68006 9.66667 9.50673 9.66667 9.33339C9.66667 9.16006 9.74 8.98673 9.86 8.86006C9.92667 8.80006 9.99333 8.75339 10.08 8.72006C10.2 8.66673 10.3333 8.65339 10.4667 8.68006C10.5067 8.68673 10.5467 8.70006 10.5867 8.72006C10.6267 8.73339 10.6667 8.75339 10.7067 8.78006C10.74 8.80673 10.7733 8.83339 10.8067 8.86006C10.9267 8.98673 11 9.16006 11 9.33339C11 9.50673 10.9267 9.68006 10.8067 9.80673Z" fill="#8E8E93"/>
+                                            </svg>                                            
+                                            Выбрать дату
+                                        </a>
+                                    </div>
+                                    <div class="train-data-item">
+                                        <p class="train-data-text">23 июля, суббота</p>
+                                        <p class="train-data-text green">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M7.99998 1.33325C4.32665 1.33325 1.33331 4.32659 1.33331 7.99992C1.33331 11.6733 4.32665 14.6666 7.99998 14.6666C11.6733 14.6666 14.6666 11.6733 14.6666 7.99992C14.6666 4.32659 11.6733 1.33325 7.99998 1.33325ZM7.49998 5.33325C7.49998 5.05992 7.72665 4.83325 7.99998 4.83325C8.27331 4.83325 8.49998 5.05992 8.49998 5.33325V8.66658C8.49998 8.93992 8.27331 9.16658 7.99998 9.16658C7.72665 9.16658 7.49998 8.93992 7.49998 8.66658V5.33325ZM8.61331 10.9199C8.57998 11.0066 8.53331 11.0733 8.47331 11.1399C8.40665 11.1999 8.33331 11.2466 8.25331 11.2799C8.17331 11.3133 8.08665 11.3333 7.99998 11.3333C7.91331 11.3333 7.82665 11.3133 7.74665 11.2799C7.66665 11.2466 7.59331 11.1999 7.52665 11.1399C7.46665 11.0733 7.41998 11.0066 7.38665 10.9199C7.35331 10.8399 7.33331 10.7533 7.33331 10.6666C7.33331 10.5799 7.35331 10.4933 7.38665 10.4133C7.41998 10.3333 7.46665 10.2599 7.52665 10.1933C7.59331 10.1333 7.66665 10.0866 7.74665 10.0533C7.90665 9.98658 8.09331 9.98658 8.25331 10.0533C8.33331 10.0866 8.40665 10.1333 8.47331 10.1933C8.53331 10.2599 8.57998 10.3333 8.61331 10.4133C8.64665 10.4933 8.66665 10.5799 8.66665 10.6666C8.66665 10.7533 8.64665 10.8399 8.61331 10.9199Z" fill="#1A9016"/>
+                                            </svg>
+                                            Указано местное время
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="train-cards-wrap">
+                                <div class="train-cards-items active">
+                                    <div class="train-cards-item">
+                                        <button class="train-cards-close">
+                                            <span>Показать ушедшие (4 поезда)</span>
+                                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.28 6.46655L8.9333 10.8132C8.41997 11.3266 7.57997 11.3266 7.06664 10.8132L2.71997 6.46655" stroke="#007AFF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                
+                                        </button>
+                                        <div class="train-cards">
+                                            <div class="train-card gray">
+                                                <div class="train-card-body">
+                                                    <b class="train-card-time">01:20</b>
+                                                    <div class="train-card-country">
+                                                        <div class="train-card-box">
+                                                            <span>Откуда</span>
+                                                            <b>Санкт-Петербург</b>
+                                                        </div>
+                                                        <div class="train-card-box">
+                                                            <span>Куда</span>
+                                                            <b>Нижний Новгород</b>
+                                                        </div>
+                                                    </div>
+                                                    <span class="train-card-spn">718И</span>
+                                                </div>
+                                                <a href="#" class="train-card-link">Выбрать места</a>
+                                            </div>
+                                            <div class="train-card gray">
+                                                <div class="train-card-body">
+                                                    <b class="train-card-time">01:20</b>
+                                                    <div class="train-card-country">
+                                                        <div class="train-card-box">
+                                                            <span>Откуда</span>
+                                                            <b>Санкт-Петербург</b>
+                                                        </div>
+                                                        <div class="train-card-box">
+                                                            <span>Куда</span>
+                                                            <b>Нижний Новгород</b>
+                                                        </div>
+                                                    </div>
+                                                    <span class="train-card-spn">718И</span>
+                                                </div>
+                                                <a href="#" class="train-card-link">Выбрать места</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="train-cards-item">
+                                        <button class="train-cards-close">
+                                            <span>Показать ушедшие (4 поезда)</span>
+                                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.28 6.46655L8.9333 10.8132C8.41997 11.3266 7.57997 11.3266 7.06664 10.8132L2.71997 6.46655" stroke="#007AFF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                
+                                        </button>
+                                        <div class="train-cards">
+                                            <div class="train-card">
+                                                <div class="train-card-body">
+                                                    <b class="train-card-time">01:20</b>
+                                                    <div class="train-card-country">
+                                                        <div class="train-card-box">
+                                                            <span>Откуда</span>
+                                                            <b>Санкт-Петербург</b>
+                                                        </div>
+                                                        <div class="train-card-box">
+                                                            <span>Куда</span>
+                                                            <b>Нижний Новгород</b>
+                                                        </div>
+                                                    </div>
+                                                    <span class="train-card-spn">718И</span>
+                                                </div>
+                                                <a href="#" class="train-card-link">Выбрать места</a>
+                                            </div>
+                                            <div class="train-card">
+                                                <div class="train-card-body">
+                                                    <b class="train-card-time">01:20</b>
+                                                    <div class="train-card-country">
+                                                        <div class="train-card-box">
+                                                            <span>Откуда</span>
+                                                            <b>Санкт-Петербург</b>
+                                                        </div>
+                                                        <div class="train-card-box">
+                                                            <span>Куда</span>
+                                                            <b>Нижний Новгород</b>
+                                                        </div>
+                                                    </div>
+                                                    <span class="train-card-spn">718И</span>
+                                                </div>
+                                                <a href="#" class="train-card-link">Выбрать места</a>
+                                            </div>
+                                            <div class="train-card">
+                                                <div class="train-card-body">
+                                                    <b class="train-card-time">01:20</b>
+                                                    <div class="train-card-country">
+                                                        <div class="train-card-box">
+                                                            <span>Откуда</span>
+                                                            <b>Санкт-Петербург</b>
+                                                        </div>
+                                                        <div class="train-card-box">
+                                                            <span>Куда</span>
+                                                            <b>Нижний Новгород</b>
+                                                        </div>
+                                                    </div>
+                                                    <span class="train-card-spn">718И</span>
+                                                </div>
+                                                <a href="#" class="train-card-link">Выбрать места</a>
+                                            </div>
+                                            <div class="train-card">
+                                                <div class="train-card-body">
+                                                    <b class="train-card-time">01:20</b>
+                                                    <div class="train-card-country">
+                                                        <div class="train-card-box">
+                                                            <span>Откуда</span>
+                                                            <b>Санкт-Петербург</b>
+                                                        </div>
+                                                        <div class="train-card-box">
+                                                            <span>Куда</span>
+                                                            <b>Нижний Новгород</b>
+                                                        </div>
+                                                    </div>
+                                                    <span class="train-card-spn">718И</span>
+                                                </div>
+                                                <a href="#" class="train-card-link">Выбрать места</a>
+                                            </div>
+                                            <div class="train-card">
+                                                <div class="train-card-body">
+                                                    <b class="train-card-time">01:20</b>
+                                                    <div class="train-card-country">
+                                                        <div class="train-card-box">
+                                                            <span>Откуда</span>
+                                                            <b>Санкт-Петербург</b>
+                                                        </div>
+                                                        <div class="train-card-box">
+                                                            <span>Куда</span>
+                                                            <b>Нижний Новгород</b>
+                                                        </div>
+                                                    </div>
+                                                    <span class="train-card-spn">718И</span>
+                                                </div>
+                                                <a href="#" class="train-card-link">Выбрать места</a>
+                                            </div>
+
+                                            <button class="train-cards-more">Показать еще</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="train-cards-items">
+                                    <div class="train-cards-item">
+                                        <button class="train-cards-close">
+                                            <span>Показать ушедшие (4 поезда)</span>
+                                            <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M13.28 6.46655L8.9333 10.8132C8.41997 11.3266 7.57997 11.3266 7.06664 10.8132L2.71997 6.46655" stroke="#007AFF" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>                                                
+                                        </button>
+                                        <div class="train-cards">
+                                            <div class="train-card green">
+                                                <div class="train-card-body">
+                                                    <b class="train-card-time">01:20</b>
+                                                    <div class="train-card-country">
+                                                        <div class="train-card-box">
+                                                            <span>Откуда</span>
+                                                            <b>Санкт-Петербург</b>
+                                                        </div>
+                                                        <div class="train-card-box">
+                                                            <span>Куда</span>
+                                                            <b>Нижний Новгород</b>
+                                                        </div>
+                                                    </div>
+                                                    <span class="train-card-spn">718И</span>
+                                                </div>
+                                                <a href="#" class="train-card-link">Выбрать места</a>
+                                            </div>
+                                            <div class="train-card green">
+                                                <div class="train-card-body">
+                                                    <b class="train-card-time">01:20</b>
+                                                    <div class="train-card-country">
+                                                        <div class="train-card-box">
+                                                            <span>Откуда</span>
+                                                            <b>Санкт-Петербург</b>
+                                                        </div>
+                                                        <div class="train-card-box">
+                                                            <span>Куда</span>
+                                                            <b>Нижний Новгород</b>
+                                                        </div>
+                                                    </div>
+                                                    <span class="train-card-spn">718И</span>
+                                                </div>
+                                                <a href="#" class="train-card-link">Выбрать места</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="train-cards-text">Даты изменения и дни курсирования поездов, отправляющихся после полуночи, относятся к новым суткам. Чтобы узнать цену билета на поезда РЖД, выберите станции отправления и назначения.</p>
+                                <div class="train-yandex">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.03998 12C2.03998 6.477 6.51598 2 12.04 2C17.562 2 22.04 6.477 22.04 12C22.04 17.523 17.562 22 12.04 22C6.51598 22 2.03998 17.523 2.03998 12Z" fill="#FC3F1D"/>
+                                        <path d="M13.32 7.66606H12.396C10.702 7.66606 9.81099 8.52406 9.81099 9.78906C9.81099 11.2191 10.427 11.8891 11.692 12.7481L12.737 13.4521L9.73399 17.9391H7.48999L10.185 13.9251C8.63499 12.8141 7.76499 11.7351 7.76499 9.91006C7.76499 7.62206 9.35999 6.06006 12.385 6.06006H15.388V17.9281H13.32V7.66606Z" fill="white"/>
+                                    </svg>
+                                    <p>Данные предоставлены сервисом Яндекс.Расписания</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="bottom-menu station-menu">
+            <div class="bottom-menu-links">
+                <a href="#" class="bottom-menu-link">
+                    <div class="menu-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.86 8.37L13.93 2.83C12.86 1.97 11.13 1.97 10.07 2.82L3.14002 8.37C2.36002 8.99 1.86002 10.3 2.03002 11.28L3.36002 19.24C3.60002 20.66 4.96002 21.81 6.40002 21.81H17.6C19.03 21.81 20.4 20.65 20.64 19.24L21.97 11.28C22.13 10.3 21.63 8.99 20.86 8.37ZM12 15.5C10.62 15.5 9.50002 14.38 9.50002 13C9.50002 11.62 10.62 10.5 12 10.5C13.38 10.5 14.5 11.62 14.5 13C14.5 14.38 13.38 15.5 12 15.5Z" fill="#636366"/>
+                        </svg>
+                    </div>
+                    Главная
+                </a>
+                <a href="#" class="bottom-menu-link">
+                    <div class="menu-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M14 4H7.5C6.10218 4 5.40326 4 4.85195 4.22836C4.11687 4.53284 3.53284 5.11687 3.22836 5.85195C3 6.40326 3 7.10218 3 8.5V9.25C3 9.66421 3.33579 10 3.75 10H4C5.10457 10 6 10.8954 6 12C6 13.1046 5.10457 14 4 14H3.75C3.33579 14 3 14.3358 3 14.75V15.5C3 16.8978 3 17.5967 3.22836 18.1481C3.53284 18.8831 4.11687 19.4672 4.85195 19.7716C5.40326 20 6.10218 20 7.5 20H14V19C14 18.4477 14.4477 18 15 18V16C14.4477 16 14 15.5523 14 15V14C14 13.4477 14.4477 13 15 13V11C14.4477 11 14 10.5523 14 10V9C14 8.44772 14.4477 8 15 8V6C14.4477 6 14 5.55228 14 5V4Z" fill="#636366"/>
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M15 6V8C15.5523 8 16 8.44772 16 9V10C16 10.5523 15.5523 11 15 11V13C15.5523 13 16 13.4477 16 14V15C16 15.5523 15.5523 16 15 16V18C15.5523 18 16 18.4477 16 19V20H16.5C17.8978 20 18.5967 20 19.1481 19.7716C19.8831 19.4672 20.4672 18.8831 20.7716 18.1481C21 17.5967 21 16.8978 21 15.5V14.75C21 14.3358 20.6642 14 20.25 14H20C18.8954 14 18 13.1046 18 12C18 10.8954 18.8954 10 20 10H20.25C20.6642 10 21 9.66421 21 9.25V8.5C21 7.10218 21 6.40326 20.7716 5.85195C20.4672 5.11687 19.8831 4.53284 19.1481 4.22836C18.5967 4 17.8978 4 16.5 4H16V5C16 5.55228 15.5523 6 15 6Z" fill="#636366"/>
+                        </svg>    
+                    </div>
+                    Заказы
+                </a>
+                <a href="#" class="bottom-menu-link active">
+                    <div class="menu-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22 15V9C22 7.34 20.66 6 19 6H5C3.34 6 2 7.34 2 9V15C2 16.66 3.34 18 5 18H19C20.66 18 22 16.66 22 15Z" fill="#636366"/>
+                            <path d="M5.92996 19.5H18.07C18.39 19.5 18.62 19.79 18.56 20.1C18.29 21.58 17.42 22 15.33 22H8.66996C6.56996 22 5.70996 21.58 5.43996 20.1C5.37996 19.79 5.60996 19.5 5.92996 19.5Z" fill="#636366"/>
+                            <path d="M8.66996 2H15.33C17.43 2 18.29 2.42 18.56 3.9C18.62 4.21 18.38 4.5 18.07 4.5H5.92996C5.60996 4.5 5.37996 4.21 5.43996 3.9C5.70996 2.42 6.56996 2 8.66996 2Z" fill="#636366"/>
+                        </svg>
+                    </div>
+                    Табло
+                </a>
+                <a href="#" class="bottom-menu-link">
+                    <div class="menu-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3 10.4C3 8.15979 3 7.03969 3.43597 6.18404C3.81947 5.43139 4.43139 4.81947 5.18404 4.43597C6.03969 4 7.15979 4 9.4 4H14.6C16.8402 4 17.9603 4 18.816 4.43597C19.5686 4.81947 20.1805 5.43139 20.564 6.18404C21 7.03969 21 8.15979 21 10.4V11.6C21 13.8402 21 14.9603 20.564 15.816C20.1805 16.5686 19.5686 17.1805 18.816 17.564C17.9603 18 16.8402 18 14.6 18H7.41421C7.149 18 6.89464 18.1054 6.70711 18.2929L4.70711 20.2929C4.07714 20.9229 3 20.4767 3 19.5858V18V13V10.4ZM9 8C8.44772 8 8 8.44772 8 9C8 9.55228 8.44772 10 9 10H15C15.5523 10 16 9.55228 16 9C16 8.44772 15.5523 8 15 8H9ZM9 12C8.44772 12 8 12.4477 8 13C8 13.5523 8.44772 14 9 14H12C12.5523 14 13 13.5523 13 13C13 12.4477 12.5523 12 12 12H9Z" fill="#636366"/>
+                        </svg>
+                    </div>
+                    Помощь
+                </a>
+                <a href="#" class="bottom-menu-link">
+                    <div class="menu-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M19.6515 19.4054C20.2043 19.2902 20.5336 18.7117 20.2589 18.2183C19.6533 17.1307 18.6993 16.1749 17.4788 15.4465C15.907 14.5085 13.9812 14 12 14C10.0188 14 8.09292 14.5085 6.52112 15.4465C5.30069 16.1749 4.34666 17.1307 3.74108 18.2183C3.46638 18.7117 3.79562 19.2902 4.34843 19.4054C9.39524 20.4572 14.6047 20.4572 19.6515 19.4054Z" fill="#636366"/>
+                            <circle cx="12" cy="8" r="5" fill="#636366"/>
+                        </svg>
+                    </div>
+                    Профиль
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>

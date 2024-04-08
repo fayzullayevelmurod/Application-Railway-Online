@@ -1,37 +1,3 @@
-// Popular tab
-let popularTabs = document.querySelectorAll('.popular-tab');
-let popularItems = document.querySelectorAll('.popular-items');
-let popularTabBg = document.querySelector('.popular-tab-bg');
-
-try {
-    let initialTabWidth = popularTabs[0].offsetWidth;
-    popularTabBg.style.width = initialTabWidth + 'px';
-    popularTabBg.style.left = '1.4px';
-
-    popularTabs.forEach(function (tab, index) {
-        tab.addEventListener('click', function () {
-            popularTabs.forEach(function (t) {
-                t.classList.remove('active');
-            });
-            tab.classList.add('active');
-
-            popularItems.forEach(function (item, i) {
-                if (i === index) {
-                    item.classList.add('active');
-                } else {
-                    item.classList.remove('active');
-                }
-            });
-
-            let tabWidth = tab.offsetWidth;
-            popularTabBg.style.width = tabWidth + 'px';
-            popularTabBg.style.left = (index * tabWidth + 1.4) + 'px';
-        });
-    });
-
-} catch (error) { }
-
-
 // Menu active
 let menuLinks = document.querySelectorAll('.bottom-menu-link');
 menuLinks.forEach(function (menuLink) {
@@ -160,5 +126,104 @@ stationWords.forEach(function (stationWord) {
             link.classList.remove('active');
         });
         stationWord.classList.add('active');
+    });
+});
+
+
+// Popular tab
+let popularTabs = document.querySelectorAll('.popular-tab');
+let popularItems = document.querySelectorAll('.popular-items');
+let popularTabBg = document.querySelector('.popular-tab-bg');
+
+try {
+    let initialTabWidth = popularTabs[0].offsetWidth;
+    popularTabBg.style.width = initialTabWidth + 'px';
+    popularTabBg.style.left = '1.4px';
+
+    popularTabs.forEach(function (tab, index) {
+        tab.addEventListener('click', function () {
+            popularTabs.forEach(function (t) {
+                t.classList.remove('active');
+            });
+            tab.classList.add('active');
+
+            popularItems.forEach(function (item, i) {
+                if (i === index) {
+                    item.classList.add('active');
+                } else {
+                    item.classList.remove('active');
+                }
+            });
+
+            let tabWidth = tab.offsetWidth;
+            popularTabBg.style.width = tabWidth + 'px';
+            popularTabBg.style.left = (index * tabWidth + 1.4) + 'px';
+        });
+    });
+
+} catch (error) { }
+
+
+// Train tabs
+let trainTabs = document.querySelectorAll('.train-tab');
+let trainTabBg = document.querySelector('.train-tab-bg');
+let trainItems = document.querySelectorAll('.train-cards-items');
+
+try {
+    let initialTabWidth = trainTabs[0].offsetWidth;
+    trainTabBg.style.width = initialTabWidth + 'px';
+    trainTabBg.style.left = '1.6px';
+
+    trainTabs.forEach(function (tab, index) {
+        tab.addEventListener('click', function () {
+            trainTabs.forEach(function (t) {
+                t.classList.remove('active');
+            });
+            tab.classList.add('active');
+
+            let tabWidth = tab.offsetWidth;
+            trainTabBg.style.width = tabWidth + 'px';
+            trainTabBg.style.left = (index * tabWidth + 1.6) + 'px';
+
+            trainItems.forEach(function (item) {
+                item.classList.remove('active');
+            });
+
+            trainItems[index].classList.add('active');
+        });
+    });
+
+} catch (error) { }
+
+
+// Train cards close
+let cardsClose = document.querySelectorAll('.train-cards-close');
+let trainCards = document.querySelectorAll('.train-cards');
+
+cardsClose.forEach(function(closeButton, index) {
+    closeButton.addEventListener('click', function() {
+        if (this.classList.contains('active')) {
+            this.classList.remove('active');
+            trainCards[index].classList.remove('active');
+            this.querySelector('span').textContent = 'Показать ушедшие (4 поезда)';
+        } else {
+            this.classList.add('active');
+            trainCards[index].classList.add('active');
+            this.querySelector('span').textContent = 'Скрыть ушедшие (4 поезда)';
+        }
+    });
+});
+
+
+
+
+// Train active
+let trainInfoTabs = document.querySelectorAll('.train-info-tab');
+trainInfoTabs.forEach(function (trainInfoTab) {
+    trainInfoTab.addEventListener('click', function () {
+        trainInfoTabs.forEach(function (link) {
+            link.classList.remove('active');
+        });
+        trainInfoTab.classList.add('active');
     });
 });
