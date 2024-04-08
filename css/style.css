@@ -1541,11 +1541,16 @@ input[type="search"]::-webkit-search-cancel-button {
     flex-direction: column;
     gap: 12px;
 }
-.train-info-top .train-info-tabs{
-    display: flex;
+.train-info-top .train-info-tabs1,
+.train-info-top .train-info-tabs2{
+    display: none;
     gap: 20px;
     box-sizing: border-box;
     border-bottom: 1px solid rgb(159, 159, 159);
+}
+.train-info-top .train-info-tabs1.active,
+.train-info-top .train-info-tabs2.active{
+    display: flex;
 }
 .train-info-top .train-info-tab{
     color: rgb(28, 28, 30);
@@ -1622,16 +1627,20 @@ input[type="search"]::-webkit-search-cancel-button {
     flex-direction: column;
     gap: 24px;
 }
-.train-info .train-cards-items,
+.train-info .train-cards-block,
 .train-info .train-cards-item{
     display: flex;
     flex-direction: column;
     gap: 16px;
+    width: 100%;
 }
-.train-info .train-cards-items{
+.train-info .train-cards-items,
+.train-info .train-cards-block{
     display: none;
+    width: 100%;
 }
-.train-info .train-cards-items.active{
+.train-info .train-cards-items.active,
+.train-info .train-cards-block.active{
     display: flex;
 }
 .train-cards-item .train-cards-close{

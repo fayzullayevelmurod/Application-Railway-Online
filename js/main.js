@@ -166,6 +166,7 @@ try {
 
 // Train tabs
 let trainTabs = document.querySelectorAll('.train-tab');
+let trainTabs2 = document.querySelectorAll('.train-info-tab');
 let trainTabBg = document.querySelector('.train-tab-bg');
 let trainItems = document.querySelectorAll('.train-cards-items');
 
@@ -190,10 +191,19 @@ try {
             });
 
             trainItems[index].classList.add('active');
+
+            if (index === 0) {
+                document.querySelector('.train-info-tabs1').classList.add('active');
+                document.querySelector('.train-info-tabs2').classList.remove('active');
+            } else if (index === 1) {
+                document.querySelector('.train-info-tabs1').classList.remove('active');
+                document.querySelector('.train-info-tabs2').classList.add('active');
+            }
         });
     });
 
 } catch (error) { }
+
 
 
 // Train cards close
@@ -216,14 +226,26 @@ cardsClose.forEach(function(closeButton, index) {
 
 
 
-
 // Train active
-let trainInfoTabs = document.querySelectorAll('.train-info-tab');
-trainInfoTabs.forEach(function (trainInfoTab) {
-    trainInfoTab.addEventListener('click', function () {
-        trainInfoTabs.forEach(function (link) {
-            link.classList.remove('active');
+function activateTab(trainInfoTabs, trainBlocks) {
+    trainInfoTabs.forEach(function (trainInfoTab, index) {
+        trainInfoTab.addEventListener('click', function () {
+            let activeIndex = Array.from(trainInfoTabs).findIndex(tab => tab.classList.contains('active'));
+            if (activeIndex !== -1) {
+                trainInfoTabs[activeIndex].classList.remove('active');
+                trainBlocks[activeIndex].classList.remove('active');
+            }
+            
+            trainInfoTab.classList.add('active');
+            trainBlocks[index].classList.add('active');
         });
-        trainInfoTab.classList.add('active');
     });
-});
+}
+
+let trainInfoTabs1 = document.querySelectorAll('.train-info-tab1');
+let trainBlocks1 = document.querySelectorAll('.train-cards-block1');
+activateTab(trainInfoTabs1, trainBlocks1);
+
+let trainInfoTabs2 = document.querySelectorAll('.train-info-tab2');
+let trainBlocks2 = document.querySelectorAll('.train-cards-block2');
+activateTab(trainInfoTabs2, trainBlocks2);
